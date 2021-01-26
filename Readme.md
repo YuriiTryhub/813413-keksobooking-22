@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Yurii Tryhub](https://up.htmlacademy.ru/javascript/22/user/813413).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан] (https://htmlacademy.ru/profile/viktorkan).
 
 ---
 

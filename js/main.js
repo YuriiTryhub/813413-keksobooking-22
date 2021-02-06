@@ -1,10 +1,16 @@
-function randomInteger(min, max) {
-  // случайное число от min до (max+1)
-  let rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand); // return rand.toFixed(4); - 4 знака после запятой.
+//1
+function getRandomInteger(min, max) {
+  return Math.random() * (max - min) + min;
 }
-
-alert( randomInteger(0, 3) ); //включая 0
-
+console.log(getRandomInteger(1, 5));
 
 //взял из: https://learn.javascript.ru/task/random-int-min-max
+
+//2
+function getRandomFloat(from, to, decimal = 2) {
+  if (to > from && from >= 0) {
+    return +((Math.random() * (to - from) + from).toFixed(decimal));
+  }
+}
+getRandomFloat(0, 10);
+console.log(getRandomFloat(2.99, 3, 2));

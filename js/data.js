@@ -1,3 +1,5 @@
+import {getRandomInteger, getRandomArrayElement, getRandomArrayLength} from './until.js';
+
 const AVATARS = ['img/avatars/user01.png', 'img/avatars/user02.png', 'img/avatars/user03.png', 'img/avatars/user04.png', 'img/avatars/user05.png', 'img/avatars/user06.png',
   'img/avatars/user07.png', 'img/avatars/user08.png']
 const TITLES = ['Обьявление№1', 'Обьявление№2', 'Обьявление№3', 'Обьявление№4', 'Обьявление№5', 'Обьявление№6', 'Обьявление№7', 'Обьявление№8', 'Обьявление№9','Обьявление№10']
@@ -12,5 +14,31 @@ const CHECKOUTS = ['12:00', '13:00', '14:00']
 const DESCRIPTIONS = ['Новая просторная квартира в стиле лофт', 'Нотки скандинаского стиля', 'Огромная кухня', 'Комбинированные спальни', 'Антикварный зал', 'Три уборные и две спальни', 'Высокие потолки', 'Маленькая, но уютная', 'Большая и просторная', 'Много окон и света']
 const PHOTOS = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg']
 
+const getData = () => {
+  return {
+    author: {
+      avatar: getRandomArrayElement(AVATARS),
+    },
+    offer: {
+      title: getRandomArrayElement(TITLES),
+      address: getRandomArrayElement(ADRESS),
+      price: getRandomArrayElement(PRICES),
+      type: getRandomArrayElement(TYPES),
+      rooms: getRandomArrayElement(ROOMS),
+      guests: getRandomArrayElement(GUESTS),
+      checkin: getRandomArrayElement(CHECKINS),
+      checkout: getRandomArrayElement(CHECKOUTS),
+      features: getRandomArrayLength(FEATURES),
+      description: getRandomArrayElement(DESCRIPTIONS),
+      photos: getRandomArrayLength(PHOTOS),
+    },
+    location: {
+      x: getRandomInteger(35.65000, 35.70000),
+      y: getRandomInteger(139.70000, 139.80000),
+    },
+  }
+}
 
-export {AVATARS, TITLES, ADRESS, PRICES, FEATURES, TYPES, ROOMS, GUESTS, CHECKINS, CHECKOUTS, DESCRIPTIONS, PHOTOS};
+const data = new Array(10).fill(null).map(getData);
+alert(data);
+

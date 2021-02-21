@@ -38,5 +38,5 @@ const getData = () => {
   }
 }
 
-const data = new Array(10).fill(null).map(getData)
-console.log(data);
+const data = new Array(10).fill(null).map(getData);
+alert(data);

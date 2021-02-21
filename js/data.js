@@ -1,4 +1,4 @@
-import {getRandomInteger, getRandomArrayElement, getRandomArrayLength} from './until.js';
+import {getRandomInteger, getRandomArrayElement, getRandomArrayLength} from './util.js';
 
 const AVATARS = ['img/avatars/user01.png', 'img/avatars/user02.png', 'img/avatars/user03.png', 'img/avatars/user04.png', 'img/avatars/user05.png', 'img/avatars/user06.png',
   'img/avatars/user07.png', 'img/avatars/user08.png']
@@ -40,5 +40,5 @@ const getData = () => {
 }
 
 const data = new Array(10).fill(null).map(getData);
-alert(data);
+console.log(data);
 
